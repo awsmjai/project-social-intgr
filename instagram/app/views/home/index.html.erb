@@ -3,3 +3,12 @@
     <%= image_tag instagram.images.standard_resolution.url %>
 
 <% end %>
+<br>
+<h1>Searched Tag Media</h1>
+<p>Tag Counts</p><%= @count%>
+<br>
+<% @tag.each do |tag| %>
+
+    <%= image_tag tag.images.standard_resolution.url %>
+
+<% end %>
