@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<%= link_to 'Edit', edit_location_path(@location) %>
+
+<br>
+<p>Location Images</p>
+<br>
+<% @media.each do |media| %>
+
+    <%= image_tag media.images.standard_resolution.url %>
+
+<% end %>

@@ -1,3 +1,6 @@
+
+<br>
+<br>
 <% @instagram.each do |instagram| %>
 
     <%= image_tag instagram.images.standard_resolution.url %>
@@ -13,10 +16,4 @@
 
 <% end %>
 
-<p>Location Images</p>
-<br>
-<% @media.each do |media| %>
 
-    <%= image_tag media.images.standard_resolution.url %>
-
-<% end %>

@@ -3,7 +3,6 @@
 <head>
   <title>Instagram</title>
 
-
 <div id="user_nav">
   <% if current_user %>
     Signed in as <strong><%= current_user.name %></strong>!
@@ -20,13 +19,14 @@
 <body>
 
 <br>
+<%= link_to 'Search Particular Location Images', new_location_path %>
+<br>
+<br>
 <%= form_tag("/search", :method => "get") do %>
     <%= text_field_tag(:q) %>
     <%= submit_tag("Tag Search") %>
 <% end %>
 <br>
-
-
 <%= yield %>
 
 </body>
