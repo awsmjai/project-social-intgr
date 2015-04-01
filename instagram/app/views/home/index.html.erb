@@ -10,10 +10,30 @@
 <h1>Searched Tag Media</h1>
 <p>Tag Counts</p><%= @count%>
 <br>
-<% @tag.each do |tag| %>
+<% @tag1.each do |tag| %>
+
+    <%= image_tag tag.images.standard_resolution.url %>
+
+<% end %>
+<% @tag2.each do |tag| %>
+
+    <%= image_tag tag.images.standard_resolution.url %>
+
+<% end %>
+<% @tag3.each do |tag| %>
+
+    <%= image_tag tag.images.standard_resolution.url %>
+
+<% end %>
+<% @tag4.each do |tag| %>
 
     <%= image_tag tag.images.standard_resolution.url %>
 
 <% end %>
 
+<% @tag4.each do |tag| %>
+
+    <%= image_tag tag.images.standard_resolution.url %>
+
+<% end %>
 
