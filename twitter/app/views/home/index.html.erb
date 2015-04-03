@@ -1,0 +1,7 @@
+<h2>HashTag Tweets</h2>
+<div id="twts">
+ <% @tweet.each do |tweet| %>
+   <blockquote><%= tweet.text %></blockquote>
+   <div class="from">&mdash; @<%= tweet.user.screen_name %></div>
+ <% end %>
+</div>
