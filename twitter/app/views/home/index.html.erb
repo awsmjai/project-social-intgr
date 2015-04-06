@@ -1,7 +1,13 @@
+
 <h2>HashTag Tweets</h2>
 <div id="twts">
  <% @tweet.each do |tweet| %>
-   <blockquote><%= tweet.text %></blockquote>
+   <%= image_tag tweet.user.profile_image_url %>
+
+  <p>URL </p> <%= image_tag tweet.url %>
    <div class="from">&mdash; @<%= tweet.user.screen_name %></div>
+   <%= tweet.user.location %>
+   <blockquote><%= tweet.text %></blockquote>
  <% end %>
 </div>
+

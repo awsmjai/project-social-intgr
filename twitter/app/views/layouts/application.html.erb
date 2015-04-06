@@ -22,6 +22,7 @@
 <%= form_tag("/search", :method => "get") do %>
     <p> Tweets </p>
     <%= text_field_tag(:q) %>
+    <%= text_field_tag(:address) %>
     <%= submit_tag("Tag Tweets") %>
 <% end %>
 <%= yield %>
