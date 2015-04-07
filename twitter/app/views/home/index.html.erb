@@ -1,13 +1,18 @@
 
-<h2>HashTag Tweets</h2>
+<h2>Tweets Result</h2>
 <div id="twts">
  <% @tweet.each do |tweet| %>
+ <% unless tweet.media? %>
    <%= image_tag tweet.user.profile_image_url %>
-
-  <p>URL </p> <%= image_tag tweet.url %>
    <div class="from">&mdash; @<%= tweet.user.screen_name %></div>
    <%= tweet.user.location %>
    <blockquote><%= tweet.text %></blockquote>
+ <% else %>
+   <%= image_tag tweet.user.profile_image_url %>
+   <%= image_tag tweet.media[0].media_url %>
+   <div class="from">&mdash; @<%= tweet.user.screen_name %></div>
+   <%= tweet.user.location %>
+   <blockquote><%= tweet.text %></blockquote>
+   <% end %>
  <% end %>
 </div>
-

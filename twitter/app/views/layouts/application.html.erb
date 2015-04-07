@@ -18,12 +18,11 @@
 </div>
 <br>
 
-<h1> Search HashTag Tweets</h1>
+<h1> Search HashTag or Location Tweets</h1>
 <%= form_tag("/search", :method => "get") do %>
-    <p> Tweets </p>
-    <%= text_field_tag(:q) %>
-    <%= text_field_tag(:address) %>
-    <%= submit_tag("Tag Tweets") %>
+    <p>HashTag</p><%= text_field_tag(:q) %>
+    <p>Location</p><%= text_field_tag(:address) %>
+    <%= submit_tag("Search") %>
 <% end %>
 <%= yield %>
 
