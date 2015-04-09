@@ -32,6 +32,8 @@ gem 'omniauth-twitter'
 gem 'twitter'
 gem 'geocoder'
 gem 'protected_attributes'
+gem 'rmagick', '~> 2.14.0'
+gem 'addressable'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -9,7 +9,11 @@
    <blockquote><%= tweet.text %></blockquote>
  <% else %>
    <%= image_tag tweet.user.profile_image_url %>
-   <%= image_tag tweet.media[0].media_url %>
+   <%= a=tweet.media[0].media_url.to_s.concat(":large") %>
+   <%= image_tag a %>
+   <%= img = Magick::Image.read(a).first %>
+   <%= img = img.resize_to_fit!(800,800) %>
+   <%= img.write("/home/bsuser1/Desktop/twitter_images/#{tweet.media[0].media_url.basename}") %>
    <div class="from">&mdash; @<%= tweet.user.screen_name %></div>
    <%= tweet.user.location %>
    <blockquote><%= tweet.text %></blockquote>
